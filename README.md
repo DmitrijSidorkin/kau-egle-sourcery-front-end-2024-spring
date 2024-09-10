@@ -30,17 +30,6 @@ You can install all the required dependencies by running the `npm i` command in 
 
 To run the applications in development mode, run these commands in terminal:
 
+`npm run server` - runs json-server with available endpoints listed in console. Neccesary for the app to run properly.
+
 `npm run dev` - to run the development server, launches on `localhost` on port `3000`.
-
-The following `npm` commands that are available from the projects root:
-
-`npm run server` - runs json-server with available endpoints listed in console. You can find json-server documentation here: https://www.npmjs.com/package/json-server.\
-`npm run test` - run all tests.\
-`npm run coverage` - run tests coverage.\
-`npm run build` - build the application.\
-`npm run preview` - run the production build.\
-`npm run lint` - run eslint.\
-`npm run lint:fix` - fix eslint errors.\
-`npm run stylelint` - run stylelinter.\
-`npm run stylelint:fix` - fix stylelint errors.\
-`npm run pretify` - run prettier.\
