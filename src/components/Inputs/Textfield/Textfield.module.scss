@@ -1,0 +1,74 @@
+@import '@/styles/main';
+
+$search-icon: url('@/assets/icons/search_filled.svg');
+
+.textfield {
+
+  &__input-container {
+    background-color: $white;
+    border: 1px $grey-300 solid;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: $grey-500;
+    display: flex;
+    gap: rem(8);
+    margin-bottom: 0;
+    padding: rem(7) rem(11);
+    width: 100%;
+
+    &--error {
+      border-color: $error-color;
+    }
+
+    &--focus {
+      border: $focus-border;
+      outline: none;
+      padding: rem(6) rem(10);
+    }
+
+    &--disabled {
+      border-color: $textfield-border-disabled;
+      pointer-events: none;
+    }
+  }
+
+  &__input {
+    @include font-body-m;
+
+    border: none;
+    color: $primary-200;
+    margin-bottom: 0;
+    outline: none;
+    width: 100%;
+  }
+
+  &__icon-container {
+    align-items: center;
+    display: flex;
+    height: rem(24);
+    justify-content: center;
+    width: rem(24);
+  }
+
+  &__label {
+    @include font-label-s;
+
+    color: $label-color;
+    display: block;
+    text-align: left;
+  }
+
+  &__label-text {
+    line-height: rem(24);
+    margin: 0;
+    margin-bottom: rem(4);
+  }
+
+  &:disabled {
+    color: $textfield-text-disabled;
+  }
+
+  &--error {
+    color: $error-color;
+  }
+}

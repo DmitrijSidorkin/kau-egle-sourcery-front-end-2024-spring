@@ -1,0 +1,43 @@
+@import '@/styles/main';
+
+.link {
+  @include font-label-xs;
+
+  align-items: center;
+  background-color: $white;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: $font-color-primary;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--base-font-family);
+  gap: rem(4);
+  height: auto;
+  justify-content: center;
+  padding: rem(7) rem(8);
+  transition: all 0s;
+  width: auto;
+
+  &:hover {
+    background-color: $secondary-100;
+  }
+
+  &:active {
+    background-color: $secondary-200;
+  }
+
+  svg {
+    fill: $primary-200;
+  }
+
+  &__icon {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: rem(14);
+    justify-content: center;
+    padding: rem(2);
+    width: rem(14);
+  }
+}

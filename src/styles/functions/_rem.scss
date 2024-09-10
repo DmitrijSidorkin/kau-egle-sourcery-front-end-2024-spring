@@ -1,0 +1,5 @@
+$html-font-size: 10;
+
+@function rem($value) {
+  @return calc($value / $html-font-size) + rem;
+}

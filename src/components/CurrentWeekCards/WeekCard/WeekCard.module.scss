@@ -1,0 +1,11 @@
+@import '@/styles/main';
+
+.card {
+  background-color: $white;
+  border: 1px solid $grey-100;
+  border-radius: rem(4);
+  box-shadow: $sm-box-shadow;
+  max-width: $day-width;
+  min-width: $day-width;
+  padding: rem(12);
+}

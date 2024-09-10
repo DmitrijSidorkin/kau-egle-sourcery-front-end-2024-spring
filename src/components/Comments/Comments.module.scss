@@ -1,0 +1,88 @@
+@import '@/styles/main';
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  max-height: rem(200);
+
+  &__comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    overflow: scroll;
+    overflow: hidden auto;
+  }
+
+  &__title {
+    @include font-title-s($margin-bottom: 0);
+
+    color: $primary-200;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    justify-content: left;
+  }
+
+  &__user-details {
+    align-items: center;
+    display: flex;
+    gap: rem(12);
+  }
+
+  &__user-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pfp-icon {
+    border-radius: 50%;
+    height: rem(22);
+    object-fit: cover;
+    width: rem(22);
+  }
+
+  &__user-name {
+    @include font-title-xs($margin-bottom: 0);
+
+    color: $primary-200;
+    text-transform: uppercase;
+  }
+
+  &__comment-text {
+    @include font-body-s($margin-bottom: 0);
+
+    color: $grey-600;
+    margin-left: rem(32);
+    text-align: left;
+  }
+
+  &__comment-rating {
+    align-items: center;
+    display: flex;
+    fill: $secondary-300;
+    flex-direction: row;
+    gap: rem(4);
+    height: rem(10);
+    justify-content: flex-start;
+    margin-top: rem(4);
+    stroke: $secondary-300;
+
+    svg {
+      height: rem(8.3);
+      width: rem(8.3);
+    }
+  }
+
+  &__error {
+    @include font-headline-s;
+
+    color: $red-500;
+    text-align: center;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/tools';
+
+.food-menu {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  &__lunch {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 rem(20);
+
+    @include screen-lg-1085 {
+      margin: 0 0 0 rem(10);
+    }
+
+    @include screen-xxl-1380 {
+      justify-content: center;
+    }
+  }
+
+  &__shopping-cart {
+    margin-left: auto;
+    margin-top: rem(40);
+    width: rem(283);
+  }
+}

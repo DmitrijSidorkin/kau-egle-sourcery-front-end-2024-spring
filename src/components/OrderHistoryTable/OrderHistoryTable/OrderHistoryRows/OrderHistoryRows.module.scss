@@ -1,0 +1,115 @@
+@import '@/styles/main';
+
+.orders-row {
+  border-bottom: $border-empty-line-div;
+  box-sizing: border-box;
+  display: flex;
+  text-align: left;
+
+  &__date,
+  &__summary,
+  &__vendor,
+  &__price {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: rem(16) rem(16) rem(16);
+  }
+
+  &__no-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: rem(15);
+  }
+
+  &__not-ordered {
+    @include font-label-l($margin-bottom: 0);
+
+    color: $primary-200;
+  }
+
+  &__date {
+    justify-content: flex-start;
+    width: rem(200);
+  }
+
+  &__summary {
+    text-align: left;
+    width: rem(370);
+  }
+
+  &__vendor,
+  &__price {
+    display: flex;
+    flex: 1;
+  }
+
+  &__date-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    & p {
+      @include font-body-s($margin-bottom: 0);
+
+      color: $primary-200;
+    }
+  }
+
+  &__price-container {
+    display: flex;
+    gap: rem(4);
+
+    & p {
+      @include font-body-s($margin-bottom: 0);
+
+      color: $primary-200;
+    }
+  }
+
+  @include screen-md-785-to-1379 {
+
+    &__date,
+    &__summary {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  @include screen-sm-600-to-784 {
+
+    &__date,
+    &__vendor,
+    &__price {
+      flex: 1;
+      padding: rem(5);
+      width: auto;
+    }
+
+    &__summary {
+      flex: 0 0 150px;
+      padding: rem(5);
+    }
+  }
+
+  @include screen-xs-599 {
+    align-items: center;
+    max-width: rem(350);
+    padding: rem(8);
+
+    &__date,
+    &__vendor,
+    &__price {
+      flex: 1;
+      padding: rem(5);
+      width: auto;
+    }
+
+    &__summary {
+      flex: 0 0 120px;
+      padding: rem(5);
+    }
+  }
+}

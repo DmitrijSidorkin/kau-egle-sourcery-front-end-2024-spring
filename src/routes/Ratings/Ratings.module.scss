@@ -1,0 +1,22 @@
+@import '@/styles/main';
+
+.ratings-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+  margin-left: 20px;
+  margin-top: rem(57);
+  max-width: 100%;
+
+  @include screen-md-1024-to-1379 {
+    align-items: flex-start;
+    margin-left: 20px;
+    max-width: 100%;
+  }
+
+  @include screen-md-785-to-1024 {
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+}

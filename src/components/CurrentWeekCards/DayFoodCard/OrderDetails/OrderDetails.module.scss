@@ -1,0 +1,47 @@
+@import '@/styles/main';
+
+.order-details {
+  display: flex;
+  gap: rem(8);
+  height: rem(64);
+
+  &__image-container {
+    display: flex;
+    flex-grow: 0;
+    height: rem(40);
+    min-width: rem(40);
+    width: rem(40);
+  }
+
+  &__order-text {
+    @include font-title-xs($margin-bottom: 0);
+
+    color: $primary-200;
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    text-align: left;
+  }
+
+  &__vendor {
+    color: $grey-500;
+    text-transform: uppercase;
+  }
+
+  &__dish-info {
+    display: flex;
+    gap: rem(5);
+  }
+
+  &__title {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    text-align: right;
+  }
+}

@@ -1,0 +1,40 @@
+@import '@/styles/tools';
+
+.tab {
+  @include font-label-s;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  bottom: -1.5px;
+  box-sizing: border-box;
+  color: $tab-color-default;
+  font-family: var(--base-font-family);
+  line-height: 24px;
+  padding: rem(9) rem(16);
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba($primary-600, 0.05);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: $focus-border;
+  }
+}
+
+.active {
+  border-bottom: solid 2px $secondary-400;
+  color: $tab-color-active;
+
+  &:hover {
+    cursor: default;
+  }
+}

@@ -1,0 +1,24 @@
+@import '@/styles/main';
+
+.menu-tabs {
+  display: grid;
+
+  &__tabs {
+    border-bottom: solid 1px $grey-300;
+    display: flex;
+    margin-bottom: rem(32);
+    max-width: rem(862);
+    overflow: scroll hidden;
+    padding-bottom: 1px;
+    position: relative;
+
+    @include screen-lg-1085 {
+      overflow: visible;
+      width: fit-content;
+    }
+
+    @include screen-xxl-1380 {
+      width: 100%;
+    }
+  }
+}

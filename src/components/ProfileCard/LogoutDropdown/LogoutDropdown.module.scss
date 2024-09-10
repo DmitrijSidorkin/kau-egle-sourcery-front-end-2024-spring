@@ -1,0 +1,8 @@
+@import '@/styles/main';
+
+.dropdown {
+
+  &:focus-visible {
+    outline: $focus-border;
+  }
+}

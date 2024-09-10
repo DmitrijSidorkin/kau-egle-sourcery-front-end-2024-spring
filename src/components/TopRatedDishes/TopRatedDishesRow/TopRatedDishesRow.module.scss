@@ -1,0 +1,276 @@
+@import '@/styles/main';
+
+.ratings-row {
+  background-color: $white;
+  border: 1px solid $grey-200;
+  border-radius: 8px;
+  box-shadow: $xs-box-shadow;
+  display: flex;
+  flex-direction: row;
+
+  &__dish-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: rem(16);
+    width: rem(394);
+  }
+
+  &__dish-box--container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: rem(12);
+    justify-content: flex-end;
+  }
+
+  &__dish-box--container-img {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: rem(98);
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: rem(100);
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  &__dish-box--container-p {
+    color: $font-color-primary;
+    font-size: rem(14);
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.1px;
+    line-height: rem(22);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  &__vendor-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: rem(8);
+    justify-content: flex-start;
+    padding: rem(16);
+
+    &:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    &--p {
+      color: $font-color-primary;
+      font-size: rem(14);
+      font-weight: $font-weight-medium;
+      letter-spacing: 0.1px;
+      line-height: rem(22);
+      margin: 0;
+      padding: rem(9) 0;
+      text-align: left;
+    }
+  }
+
+  &__rating-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: rem(8);
+    justify-content: flex-start;
+    padding: rem(16);
+
+    &--ratings {
+      color: $font-color-primary;
+      font-size: rem(14);
+      font-weight: $font-weight-medium;
+      letter-spacing: 0.1px;
+      line-height: rem(22);
+      text-align: left;
+    }
+
+    &--star-container {
+      align-items: center;
+      display: flex;
+      fill: $secondary-300;
+      flex-direction: row;
+      gap: rem(8);
+      justify-content: center;
+      stroke: $secondary-300;
+    }
+
+    &--order-count {
+      color: $font-color-primary;
+      font-size: rem(14);
+      font-weight: $font-weight-medium;
+      letter-spacing: 0.1px;
+      line-height: rem(22);
+    }
+  }
+
+  @include screen-md-1024-to-1379 {
+
+    &__rating-box,
+    &__vendor-box,
+    &__dish-box {
+      flex: 1;
+      padding: rem(8);
+    }
+
+    &__dish-box--container-img {
+      width: 60px;
+
+      & img {
+        height: 60%;
+      }
+    }
+
+    &__vendor-box {
+      justify-content: center;
+
+      &:last-child {
+        flex: 1;
+
+        & button {
+
+          & span {
+            font-size: rem(11);
+          }
+        }
+      }
+    }
+
+    &__rating-box {
+      justify-content: center;
+    }
+  }
+
+  @include screen-md-785-to-1024 {
+
+    &__rating-box,
+    &__vendor-box,
+    &__dish-box {
+      flex: 1;
+      padding: rem(8);
+    }
+
+    &__dish-box {
+
+      &--container-p {
+        font-size: rem(11);
+      }
+
+      &--container-img {
+        width: rem(45);
+
+        & img {
+          height: 45%;
+        }
+      }
+    }
+
+    &__vendor-box {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &:last-child {
+        flex: 1;
+        max-width: rem(180);
+
+        & button {
+
+          & span {
+            font-size: rem(10);
+          }
+        }
+      }
+    }
+
+    &__vendor-box--p {
+      font-size: rem(11);
+    }
+
+    &__rating-box {
+      display: flex;
+      justify-content: center;
+
+      &--ratings {
+        font-size: rem(11);
+        text-align: left;
+      }
+
+      &--order-count {
+        font-size: rem(11);
+      }
+    }
+  }
+  @include screen-sm-from-784 {
+
+    &__rating-box,
+    &__vendor-box,
+    &__dish-box {
+      flex: 1;
+      padding: rem(8);
+    }
+
+    &__dish-box {
+
+      &--container-p {
+        font-size: rem(11);
+      }
+
+      &--container-img {
+        width: rem(45);
+
+        & img {
+          height: 45%;
+        }
+      }
+    }
+
+    &__vendor-box {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &:last-child {
+        flex: 1;
+        max-width: rem(180);
+
+        & button {
+
+          & span {
+            font-size: rem(10);
+          }
+        }
+      }
+    }
+
+    &__vendor-box--p {
+      font-size: rem(11);
+    }
+
+    &__rating-box {
+      display: flex;
+      justify-content: center;
+
+      &--ratings {
+        font-size: rem(11);
+        text-align: left;
+      }
+
+      &--order-count {
+        font-size: rem(11);
+      }
+    }
+  }
+}

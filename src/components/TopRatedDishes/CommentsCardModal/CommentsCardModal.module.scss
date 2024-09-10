@@ -1,0 +1,150 @@
+@import '@/styles/main';
+
+.wrapper {
+  align-items: center;
+  background-color: $modal-primary-500;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal {
+  background-color: $white;
+  border-radius: rem(8);
+  display: flex;
+  flex-direction: column;
+  padding: rem(16);
+  width: rem(534);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__header-top-title {
+    @include font-headline-s($margin-bottom: 0);
+
+    color: $primary-200;
+  }
+
+  &__header-bottom {
+    display: flex;
+    gap: rem(16);
+  }
+
+  &__header-bottom-title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__header-bottom-vendor {
+    @include font-title-xs($margin-bottom: 0);
+
+    color: $grey-500;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__header-bottom-name {
+    @include font-title-s($margin-bottom: 0);
+
+    align-items: center;
+    color: $primary-200;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-botom-icons {
+    align-items: center;
+    display: flex;
+    gap: rem(4);
+  }
+
+  &__header-botom-icon {
+    align-items: center;
+    display: flex;
+    height: rem(16);
+    justify-content: center;
+    width: rem(16);
+
+    svg {
+      max-height: 100%;
+    }
+
+    &--plant {
+
+      svg {
+        fill: $green-500;
+      }
+    }
+
+    &--chilli {
+
+      svg {
+        fill: $red-500;
+      }
+    }
+  }
+
+  &__header-botom-rating {
+    align-items: center;
+    display: flex;
+    fill: $secondary-300;
+    gap: rem(8);
+    height: rem(16);
+    margin-bottom: rem(2);
+    stroke: $secondary-300;
+
+    svg {
+      height: rem(13.3);
+    }
+  }
+
+  &__header-bottom-total {
+    color: $primary-200;
+    font-size: rem(12);
+    font-weight: 500;
+    letter-spacing: rem(0.1);
+    text-align: left;
+  }
+
+  &__header-bottom-img {
+    align-items: center;
+    background: $gradient-orange;
+    border-radius: rem(8);
+    box-shadow: $sm-box-shadow;
+    height: rem(73);
+    margin: 0;
+    padding: rem(28), rem(57);
+    width: rem(73);
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  &__mid-line {
+    border-bottom: $border-empty-line-div;
+    margin-bottom: rem(20);
+    margin-top: rem(24);
+  }
+
+  &__bottom-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: rem(24);
+  }
+}

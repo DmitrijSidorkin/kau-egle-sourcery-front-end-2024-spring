@@ -1,0 +1,49 @@
+@import '@/styles/main';
+
+.sorting {
+
+  &__sort-row {
+    align-items: center;
+    display: flex;
+    gap: rem(22);
+    margin-top: rem(25);
+  }
+
+  &__label {
+    @include font-title-s;
+
+    margin: 0;
+  }
+
+  &__variables {
+    @include font-label-xs;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: $label-color;
+    cursor: pointer;
+    font-family: var(--base-font-family);
+    height: fit-content;
+    padding: rem(6) rem(7);
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $secondary-100;
+    }
+
+    &:focus {
+      outline: 1px solid $secondary-300;
+    }
+
+    &:focus-visible {
+      outline: $focus-border;
+    }
+
+    &--active {
+      border: 1px solid $secondary-300;
+      border-radius: 8px;
+    }
+  }
+}

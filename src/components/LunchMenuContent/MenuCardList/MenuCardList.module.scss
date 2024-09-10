@@ -1,0 +1,24 @@
+@import '@/styles/main';
+
+.card-list {
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(32);
+    margin-top: rem(34);
+    max-width: rem(854);
+  }
+
+  &__error-state {
+    @include font-headline-s;
+
+    color: $red-500;
+    text-align: center;
+  }
+}

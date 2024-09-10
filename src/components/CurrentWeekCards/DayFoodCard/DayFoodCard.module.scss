@@ -1,0 +1,25 @@
+@import '@/styles/main';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  height: 100%;
+  justify-content: space-between;
+  width: rem(166);
+
+  &__order-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    max-height: rem(140);
+    padding: 0 rem(8) 0 rem(7);
+    position: relative;
+    width: rem(170);
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: right;
+  }
+}

@@ -1,0 +1,21 @@
+@import '@/styles/main';
+
+.empty-cart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: rem(60) 0;
+  max-height: rem(553);
+
+  &__icon {
+    height: rem(86);
+    opacity: 0.7;
+    width: rem(124);
+  }
+
+  &__text {
+    @include font-body-m($margin-bottom: 0);
+
+    color: $grey-500;
+  }
+}

@@ -1,0 +1,9 @@
+@import '@/styles/main';
+
+.your-orders {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+  padding: rem(40) rem(20);
+}

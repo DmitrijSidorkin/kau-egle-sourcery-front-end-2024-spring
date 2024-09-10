@@ -1,0 +1,81 @@
+@import '@/styles/main';
+
+.dish-info {
+  color: $primary-200;
+
+  &__rating-details {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__vendor-div {
+    display: flex;
+    flex-grow: 1;
+    gap: rem(11);
+  }
+
+  &__vendor {
+    @include font-title-s($margin-bottom: 0);
+
+    color: $grey-500;
+    display: inline-block;
+  }
+
+  &__line {
+    align-self: center;
+    border-bottom: $border-empty-line-div;
+    flex-grow: 1;
+  }
+
+  &__dish {
+    align-content: center;
+    display: flex;
+    gap: rem(8);
+  }
+
+  &__icon-container {
+    align-items: center;
+    display: flex;
+    height: rem(63);
+    justify-content: center;
+    width: rem(64);
+  }
+
+  &__dish-name {
+    @include font-title-m($margin-bottom: 0);
+
+    align-self: center;
+  }
+
+  &__dish-rating {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+  }
+
+  &__rating-title,
+  &__comment-title {
+    @include font-label-s($margin-bottom: 0);
+  }
+
+  &__rating-comment {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+  }
+
+  &__comment {
+    @include font-body-m;
+
+    border: 1px solid $grey-300;
+    border-radius: rem(8);
+    color: $primary-200;
+    height: rem(81);
+    outline: 2px solid transparent;
+    overflow: scroll;
+    overflow: hidden auto;
+    padding: rem(8) rem(12);
+    resize: none;
+  }
+}

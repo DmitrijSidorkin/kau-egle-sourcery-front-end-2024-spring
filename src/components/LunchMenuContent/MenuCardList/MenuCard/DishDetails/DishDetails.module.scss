@@ -1,0 +1,169 @@
+@import '@/styles/main';
+
+.window-container {
+  @include window-container;
+}
+
+.dish-details {
+  background-color: $white;
+  border-radius: rem(8);
+  display: flex;
+  flex-direction: column;
+  max-width: rem(674);
+  padding: rem(16);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(16);
+  }
+
+  &__header-text {
+    @include font-headline-s($margin-bottom: 0);
+
+    color: $primary-200;
+  }
+
+  &__dish {
+    display: flex;
+    gap: rem(16);
+  }
+
+  &__icon-background {
+    align-items: center;
+    background: linear-gradient(318.11deg, #ffcb86 -5.31%, #fff5e8 122.02%);
+    border-radius: rem(8);
+    box-shadow: $sm-box-shadow;
+    display: flex;
+    height: rem(222);
+    justify-content: center;
+    width: rem(223);
+  }
+
+  &__dish-info {
+    display: flex;
+    flex-direction: column;
+    gap: rem(11);
+  }
+
+  &__vendor {
+    @include font-title-xs($margin-bottom: 0);
+
+    color: $grey-500;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__dish-title {
+    display: flex;
+    gap: rem(4);
+  }
+
+  &__dish-name {
+    @include font-title-s($margin-bottom: 0);
+
+    color: $primary-200;
+    display: flex;
+  }
+
+  &__dish-type-icons {
+    align-items: center;
+    align-self: center;
+    display: inline-block;
+    gap: rem(4);
+
+    &:first-child {
+      margin-left: rem(10);
+    }
+  }
+
+  &__main-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__dish-icon {
+    display: flex;
+    gap: rem(4);
+    height: rem(16);
+    width: rem(16);
+
+    svg {
+      max-height: 100%;
+    }
+
+    &--plant {
+
+      svg {
+        fill: $green-500;
+      }
+    }
+
+    &--chilli {
+
+      svg {
+        fill: $red-500;
+      }
+    }
+  }
+
+  &__stars-container {
+    display: flex;
+    gap: rem(8);
+    height: rem(16);
+    margin-bottom: rem(2);
+
+    svg {
+      fill: $secondary-400;
+      height: rem(13.3);
+      stroke: $secondary-400;
+    }
+  }
+
+  &__rating {
+    color: $primary-200;
+    font-family: var(--base-font-family);
+    font-size: rem(12);
+    font-weight: 500;
+    text-align: left;
+  }
+
+  &__description-and-price {
+    align-items: baseline;
+    color: $primary-200;
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
+    text-align: left;
+  }
+
+  &__dish-description {
+    @include font-body-m($margin-bottom: 0);
+
+    color: $grey-600;
+    max-height: rem(200);
+    overflow: scroll;
+    overflow: hidden auto;
+    width: rem(404);
+  }
+
+  &__price-title {
+    @include font-title-s($margin-bottom: 0);
+  }
+
+  &__price {
+    @include font-title-l($margin-bottom: 0);
+  }
+
+  &__line {
+    border-bottom: $border-empty-line-div;
+    margin: rem(24) 0 rem(20);
+  }
+
+  &__button-container {
+    display: flex;
+    gap: rem(15);
+    justify-content: flex-end;
+    margin-top: rem(24);
+  }
+}

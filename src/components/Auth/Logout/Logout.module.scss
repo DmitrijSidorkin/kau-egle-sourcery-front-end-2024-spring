@@ -1,0 +1,28 @@
+@import '@/styles/main.scss';
+
+.logout {
+  background-color: $white;
+  border: 1px solid $grey-200;
+  border-radius: 4px;
+  box-shadow: $md-box-shadow;
+  padding: rem(3) rem(0);
+  width: rem(183);
+
+  &:hover {
+    background-color: $purple-200;
+  }
+
+  &__content-wrapper {
+    align-items: center;
+    display: flex;
+    gap: rem(8);
+    padding: rem(6) rem(16);
+  }
+
+  &__text {
+    @include font-title-s($margin-bottom: 0);
+
+    color: $primary-200;
+    font-family: var(--base-font-family);
+  }
+}

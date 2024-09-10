@@ -1,0 +1,32 @@
+@import '@/styles/main';
+
+.rating-stars {
+  display: flex;
+  margin-left: rem(-6);
+
+  &__label {
+    padding: 0 rem(12);
+
+    &:focus-visible {
+      outline: $focus-border;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  svg {
+    fill: transparent;
+    height: rem(20);
+    stroke: $secondary-300;
+    width: rem(20);
+  }
+
+  &__filled {
+
+    svg {
+      fill: $secondary-300;
+    }
+  }
+}

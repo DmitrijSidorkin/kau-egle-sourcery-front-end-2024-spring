@@ -1,0 +1,57 @@
+@import '@/styles/main';
+
+.window-container {
+  @include window-container;
+}
+
+.toast {
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding: rem(15);
+  position: absolute;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-text {
+    @include font-headline-s($margin-bottom: rem(5));
+
+    color: $primary-200;
+  }
+
+  &__message {
+    display: flex;
+    gap: rem(16);
+  }
+
+  &__message-text {
+    @include font-body-l($margin-bottom: 0);
+
+    align-self: center;
+    color: $primary-200;
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(5.75);
+    text-align: left;
+  }
+
+  &__your-order {
+    @include font-label-m($margin-bottom: 0);
+  }
+
+  &__button-container {
+    align-self: flex-end;
+  }
+}

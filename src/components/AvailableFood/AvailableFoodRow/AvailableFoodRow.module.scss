@@ -1,0 +1,119 @@
+@import '@/styles/main';
+
+.available-lunch-row {
+  background-color: $white;
+  border: 1px solid $grey-200;
+  border-radius: 8px;
+  box-shadow: $xs-box-shadow;
+  display: flex;
+  width: 100%;
+
+  &__dish-box {
+    box-sizing: border-box;
+    display: flex;
+    padding: rem(16);
+    width: 37%;
+  }
+
+  &__dish-box-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__dish-box-container {
+    align-items: center;
+    display: flex;
+    gap: rem(12);
+    justify-content: flex-start;
+  }
+
+  &__dish-box-container-img {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: rem(40);
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: rem(41);
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  &__dish-box-container-p {
+    color: $font-color-primary;
+    font-size: rem(14);
+    font-weight: $font-weight-medium;
+    line-height: rem(21);
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__vendor-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: rem(8);
+    justify-content: flex-start;
+    padding: rem(16);
+    width: 24%;
+
+    &-p {
+      color: $font-color-primary;
+      font-size: rem(14);
+      font-weight: $font-weight-medium;
+      line-height: rem(21);
+      padding: rem(9) 0;
+      text-align: left;
+    }
+  }
+
+  &__user-img-container {
+    padding: rem(9) 0;
+  }
+
+  &__user-img {
+    border-radius: 50%;
+    height: rem(22);
+    object-fit: cover;
+    width: rem(22);
+  }
+
+  &__user-box {
+    align-items: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: rem(8);
+    justify-content: flex-start;
+    padding: rem(16);
+    width: fit-content;
+
+    &-p {
+      color: $font-color-primary;
+      font-size: rem(14);
+      font-weight: $font-weight-medium;
+      line-height: rem(21);
+      padding: rem(9) 0;
+      text-align: left;
+    }
+  }
+
+  &__action-box {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button-container {
+    padding: rem(16);
+  }
+}

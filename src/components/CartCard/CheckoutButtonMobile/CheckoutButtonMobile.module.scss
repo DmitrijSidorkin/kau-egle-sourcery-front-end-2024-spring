@@ -1,0 +1,105 @@
+@import '@/styles/main';
+
+.slider-button {
+  @include font-label-xs($margin-bottom: 0);
+
+  background: $grey-300;
+  border: none;
+  border-radius: rem(42);
+  color: $font-color-secondary;
+  display: flex;
+  flex-direction: row;
+  font-family: var(--base-font-family);
+  gap: rem(10);
+  height: rem(48);
+  justify-content: left;
+  overflow: hidden;
+  padding: rem(4);
+  position: relative;
+  text-align: center;
+  width: rem(160);
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &__span-circle {
+    align-items: center;
+    background-color: $green-400;
+    border-radius: rem(42);
+    box-shadow: 2px 3px 6px 0 #00000030;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: transform 0.2s linear;
+    width: 40px;
+
+    svg {
+      fill: $primary-200;
+    }
+  }
+
+  &__span-release {
+    left: -55px;
+    overflow: hidden;
+    position: absolute;
+    transition: transform 0.2s linear;
+    white-space: nowrap;
+  }
+
+  &__span-element {
+    overflow: hidden;
+    transition: transform 0.2s linear;
+    white-space: nowrap;
+  }
+
+  &__button-pressed {
+
+    .slider-button__span-element {
+      opacity: var(--right-opacity);
+      transform: translateX(var(--circle-position));
+    }
+
+    .slider-button__span-circle {
+      transform: translateX(var(--circle-position));
+    }
+
+    .slider-button__span-release {
+      opacity: var(--left-opacity);
+      transform: translateX(var(--circle-position));
+    }
+  }
+
+  &__circle-end {
+    background: $green-400;
+    justify-content: flex-end;
+  }
+
+  &__span-confirm {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    gap: rem(5);
+    justify-content: center;
+
+    svg {
+      fill: $white;
+      margin-left: rem(1);
+    }
+  }
+
+  &__icon-container {
+    align-items: center;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 2px 3px 6px 0 #00000030;
+    display: flex;
+    height: rem(40);
+    justify-content: center;
+    stroke: $green-600;
+    width: rem(40);
+  }
+}

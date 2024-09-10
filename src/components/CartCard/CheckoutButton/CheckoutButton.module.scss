@@ -1,0 +1,113 @@
+@import '@/styles/main';
+
+.checkout-button {
+  @include font-label-s($margin-bottom: 0);
+
+  background: $white;
+  border: 2px solid $green-400;
+  border-radius: rem(42);
+  color: $font-color-primary;
+  font-family: var(--base-font-family);
+  height: rem(48);
+  line-height: rem(24);
+  overflow: hidden;
+  padding: rem(4);
+  position: relative;
+  width: rem(243);
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &__span-element {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: rem(5);
+    z-index: 3;
+  }
+
+  &::before {
+    background: $green-400;
+    border-radius: rem(42);
+    clip-path: polygon(
+      50% 0%,
+      81% 14%,
+      100% 35%,
+      100% 70%,
+      81% 86%,
+      50% 100%,
+      0 100%,
+      0% 70%,
+      0% 35%,
+      0 0
+    );
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    background: linear-gradient(to left, $white, $green-400);
+    border-radius: rem(42);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__button-pressed::before,
+  &__button-pressed::after {
+    background: $green-400;
+    box-shadow: 0 0 0 1px $green-400;
+    color: $white;
+    transform: scaleX(1);
+    transition:
+      transform 1s linear,
+      background 1s linear;
+  }
+
+  &__div-confirmed {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    gap: rem(5);
+    justify-content: center;
+  }
+
+  &__icon-container {
+    align-items: center;
+    display: flex;
+    height: rem(18);
+    justify-content: center;
+    width: rem(18);
+  }
+
+  &__inner-container {
+    align-items: center;
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    height: rem(15);
+    justify-content: center;
+    stroke: $green-400;
+    width: rem(15);
+  }
+}
+
+.checkout-button:focus-visible {
+  outline: $focus-border;
+}

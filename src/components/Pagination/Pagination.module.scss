@@ -1,0 +1,54 @@
+@import '@/styles/variables/font-attributes';
+@import '@/styles/mixins/typography';
+@import '@/styles/variables/colors';
+@import '@/styles/main';
+
+.pagination-row {
+  display: flex;
+  flex-direction: row;
+  gap: rem(26);
+  padding: rem(2) 0;
+
+  &__select-container {
+    @include font-title-s($margin-bottom: 0);
+
+    align-self: center;
+    color: $font-color-secondary;
+    display: flex;
+    flex-direction: row;
+    gap: rem(8);
+
+    & select {
+      @include font-title-s($margin-bottom: 0);
+
+      background-color: $white;
+      border: none;
+      color: $font-color-secondary;
+      cursor: pointer;
+      font-family: var(--base-font-family);
+      height: rem(24);
+      margin-left: rem(8);
+
+      &:focus-visible {
+        outline: $focus-border;
+      }
+    }
+  }
+
+  &__current-page {
+    @include font-title-s($margin-bottom: 0);
+
+    align-self: center;
+    color: $font-color-secondary;
+    width: rem(85);
+  }
+
+  &__navigation-container {
+    display: flex;
+    flex-direction: row;
+
+    svg {
+      fill: $grey-500;
+    }
+  }
+}

@@ -1,0 +1,228 @@
+@import '../../styles/tools.scss';
+@import '@/styles/main';
+
+.btn {
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--base-font-family);
+  gap: rem(8);
+  height: auto;
+  justify-content: center;
+  transition: all 0s;
+  width: auto;
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: $focus-border;
+  }
+
+  &.primary {
+    background-color: $primary-800;
+    color: $font-color-white;
+
+    &:hover {
+      background-color: $primary-600;
+    }
+
+    &:active {
+      background-color: $primary-400;
+    }
+
+    svg {
+      fill: $secondary-300;
+    }
+  }
+
+  &.secondary {
+    background-color: $white;
+    border: 1px solid $secondary-300;
+    color: $font-color-primary;
+
+    &:hover {
+      background-color: $secondary-100;
+    }
+
+    &:active {
+      background-color: $secondary-200;
+    }
+
+    &:focus-visible {
+      outline: $focus-border;
+    }
+
+    svg {
+      fill: $secondary-300;
+    }
+
+    &.large {
+      @include font-label-l;
+
+      padding: rem(7) rem(15);
+    }
+
+    &.medium {
+      @include font-label-m;
+
+      padding: rem(7) rem(15);
+    }
+
+    &.small {
+      @include font-label-s;
+
+      line-height: rem(24);
+      padding: rem(3) rem(7);
+    }
+
+    &.xsmall {
+      @include font-label-xs;
+
+      padding: rem(6) rem(7);
+    }
+
+    &.large,
+    &.medium {
+
+      &--left {
+        padding-left: rem(7);
+      }
+
+      &--right {
+        padding-right: rem(7);
+      }
+    }
+  }
+
+  &.tertiary {
+    background-color: $white;
+    color: $font-color-primary;
+
+    &:hover {
+      background-color: $secondary-100;
+    }
+
+    &:active {
+      background-color: $secondary-200;
+    }
+
+    &:focus-visible {
+      outline: $focus-border;
+    }
+
+    svg {
+      fill: $primary-800;
+    }
+  }
+
+  &.primary,
+  &.tertiary {
+
+    &.large {
+      @include font-label-l;
+
+      padding: rem(8) rem(16);
+    }
+
+    &.medium {
+      @include font-label-m;
+
+      padding: rem(8) rem(16);
+    }
+
+    &.small {
+      @include font-label-s;
+
+      padding: rem(4) rem(8);
+    }
+
+    &.xsmall {
+      @include font-label-xs;
+
+      gap: rem(4);
+      padding: rem(7) rem(8);
+    }
+
+    &.large,
+    &.medium {
+
+      &--left {
+        padding-left: rem(8);
+      }
+
+      &--right {
+        padding-right: rem(8);
+      }
+    }
+  }
+
+  &__icon-container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+    &--large {
+      height: rem(24);
+      width: rem(24);
+
+      &--left {
+        padding: rem(5);
+      }
+
+      &--right {
+        padding: rem(4);
+      }
+    }
+
+    &--medium {
+      height: rem(24);
+      width: rem(24);
+
+      &--left {
+        padding: rem(5);
+      }
+
+      &--right {
+        padding: rem(4);
+      }
+    }
+
+    &--small {
+      height: rem(18);
+      width: rem(18);
+
+      &--left {
+        padding: rem(3.75);
+      }
+
+      &--right {
+        padding: rem(3);
+      }
+    }
+
+    &--xsmall {
+      height: rem(14);
+      width: rem(14);
+
+      &--left {
+        padding: rem(2.92);
+      }
+
+      &--right {
+        padding: rem(2.33);
+      }
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

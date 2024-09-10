@@ -1,0 +1,41 @@
+@import '@/styles/main';
+
+.option-list {
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: $md-box-shadow;
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(4);
+  overflow: hidden;
+  position: absolute;
+  width: inherit;
+  z-index: 10;
+
+  &__list-item {
+    @include font-title-s;
+
+    background-color: $white;
+    border: 1px solid transparent;
+    border-radius: 0;
+    display: flex;
+    font-family: var(--base-font-size);
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding: rem(10) rem(16);
+    text-align: left;
+
+    &:hover {
+      background-color: $purple-200;
+    }
+
+    &:focus-visible {
+      background-color: $purple-200;
+    }
+
+    &--active {
+      background-color: $dropdown-item-hover-color;
+      color: $secondary-600;
+    }
+  }
+}

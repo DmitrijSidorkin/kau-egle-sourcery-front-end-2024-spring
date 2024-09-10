@@ -1,0 +1,55 @@
+@import '@/styles/main';
+
+.cart-card {
+  background-color: $white;
+  border: 1px solid $grey-100;
+  border-radius: 12px 0 0 12px;
+  box-shadow: $sm-box-shadow;
+  display: flex;
+  flex-direction: column;
+  max-height: rem(793);
+  padding: rem(19);
+  width: $side-card-width;
+
+  &__card-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header {
+    @include font-headline-s;
+
+    color: $primary-200;
+    margin-bottom: rem(5);
+  }
+
+  &__order-list {
+    max-height: rem(553);
+  }
+
+  &__checkout-box {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__price-container {
+    margin-top: rem(24);
+    padding: rem(12) rem(16) 0;
+    text-align: end;
+    width: rem(243);
+  }
+
+  &__price-text {
+    @include font-title-s($margin-bottom: 0);
+
+    color: $grey-500;
+  }
+
+  &__price {
+    @include font-title-l($margin-bottom: 0);
+
+    color: $primary-200;
+  }
+}

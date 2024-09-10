@@ -1,0 +1,24 @@
+@import '../../styles/tools';
+
+.page-header {
+  color: $font-color-primary;
+  margin-left: rem(20);
+  margin-top: rem(20);
+  text-align: left;
+
+  @include screen-lg-1085 {
+    margin-left: 0;
+  }
+
+  &__title {
+    @include font-headline-l;
+
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    @include font-title-l;
+
+    margin-top: rem(8);
+  }
+}

@@ -1,0 +1,14 @@
+@import '@/styles/variables/font-attributes';
+@import '@/styles/mixins/typography';
+@import '@/styles/variables/colors';
+
+.page-footer {
+  @include font-title-s($margin-bottom: 0);
+
+  color: $font-color-secondary;
+  display: flex;
+  justify-content: space-between;
+  padding: rem(40) rem(40) rem(24);
+  width: 100%;
+  z-index: 3;
+}

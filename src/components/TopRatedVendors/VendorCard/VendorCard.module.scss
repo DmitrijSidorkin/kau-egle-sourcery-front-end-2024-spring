@@ -1,0 +1,155 @@
+@import '@/styles/main';
+
+.vendor-card {
+  background-color: $white;
+  border: 1px solid $grey-100;
+  border-radius: 8px;
+  box-shadow: $sm-box-shadow;
+  display: flex;
+  justify-content: space-between;
+  padding: rem(36) rem(16) rem(16);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+  }
+
+  &__vendor-name {
+    @include font-title-xl($margin-bottom: 0);
+
+    color: $primary-200;
+  }
+
+  &__star-container {
+    display: flex;
+    fill: $secondary-300;
+    gap: rem(8);
+    height: rem(24);
+    stroke: $secondary-300;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__vendor-rating {
+    @include font-label-l;
+
+    color: $primary-200;
+    text-align: left;
+  }
+
+  &__icon-container {
+    border-radius: rem(20) rem(8) rem(20) rem(79);
+    box-shadow: $xs-box-shadow;
+    height: rem(87);
+    padding: rem(10);
+    position: relative;
+    right: rem(-26.5);
+    top: rem(-45);
+    width: rem(89);
+
+    &--top1 {
+      background-color: $yellow-300;
+    }
+
+    &--top2 {
+      background-color: $purple-200;
+    }
+
+    &--top3 {
+      background-color: $yellow-200;
+    }
+
+    img {
+      position: relative;
+      right: rem(-3);
+      top: rem(-7);
+    }
+  }
+
+  @include screen-md-1024-to-1379 {
+
+    &__vendor-name {
+      font-size: rem(20);
+      text-align: left;
+    }
+
+    &__star-container {
+
+      svg {
+        height: rem(18);
+        width: rem(18);
+      }
+    }
+  }
+
+  @include screen-md-785-to-1024 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    padding-top: rem(16);
+
+    &__content {
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__vendor-name {
+      text-align: center;
+    }
+
+    &__vendors-container {
+      gap: rem(19);
+    }
+
+    &__icon-container {
+      align-self: center;
+      border-radius: 50%;
+      height: rem(100%);
+      position: initial;
+      width: rem(100%);
+
+      img {
+        position: initial;
+        width: 100%;
+      }
+    }
+  }
+  @include screen-sm-from-784 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    padding-top: rem(16);
+
+    &__content {
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__vendor-name {
+      text-align: center;
+    }
+
+    &__vendors-container {
+      gap: rem(19);
+    }
+
+    &__icon-container {
+      align-self: center;
+      border-radius: 50%;
+      height: rem(100%);
+      position: initial;
+      width: rem(100%);
+
+      img {
+        position: initial;
+        width: 100%;
+      }
+    }
+  }
+}
