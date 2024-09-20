@@ -243,7 +243,7 @@
     @include font-body-l($margin-bottom: 0);
 
     color: $secondary-600;
-    font-family: var(--base-font-family);
+    font-family: $base-font-family;
     line-height: rem(20);
     padding: rem(2) 0;
     text-decoration: underline;

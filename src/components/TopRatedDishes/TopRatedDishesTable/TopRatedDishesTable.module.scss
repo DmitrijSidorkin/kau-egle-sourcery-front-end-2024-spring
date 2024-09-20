@@ -55,7 +55,7 @@
     border: none;
     color: $font-color-secondary;
     cursor: pointer;
-    font-family: var(--base-font-family);
+    font-family: $base-font-family;
     line-height: rem(24);
     padding: 0;
     text-align: left;

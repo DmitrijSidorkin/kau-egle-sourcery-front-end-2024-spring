@@ -9,7 +9,7 @@
   color: $font-color-secondary;
   display: flex;
   flex-direction: row;
-  font-family: var(--base-font-family);
+  font-family: $base-font-family;
   gap: rem(10);
   height: rem(48);
   justify-content: left;

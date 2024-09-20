@@ -122,7 +122,7 @@
 
   &__rating {
     color: $primary-200;
-    font-family: var(--base-font-family);
+    font-family: $base-font-family;
     font-size: rem(12);
     font-weight: 500;
     text-align: left;

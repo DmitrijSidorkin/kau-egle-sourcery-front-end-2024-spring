@@ -10,7 +10,7 @@
   bottom: -1.5px;
   box-sizing: border-box;
   color: $tab-color-default;
-  font-family: var(--base-font-family);
+  font-family: $base-font-family;
   line-height: 24px;
   padding: rem(9) rem(16);
   position: relative;

@@ -24,7 +24,7 @@
     box-sizing: border-box;
     color: $label-color;
     cursor: pointer;
-    font-family: var(--base-font-family);
+    font-family: $base-font-family;
     height: fit-content;
     padding: rem(6) rem(7);
     text-transform: uppercase;

@@ -23,6 +23,6 @@
     @include font-title-s($margin-bottom: 0);
 
     color: $primary-200;
-    font-family: var(--base-font-family);
+    font-family: $base-font-family;
   }
 }

@@ -1,9 +1,10 @@
+@import './styles/variables';
 @import './styles/variables/colors';
 
 :root {
   background-color: $grey-100;
-  font-family: var(--base-font-family);
-  font-size: var(--base-font-size);
+  font-family: $base-font-family;
+  font-size: $base-font-size;
   text-align: center;
 }
 
