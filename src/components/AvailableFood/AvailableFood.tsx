@@ -57,7 +57,7 @@ function AvailableFood(): JSX.Element {
     };
 
     fetchData();
-  }, [availableLunch, setAvailableLunch, setMeals, setVendors]);
+  }, [setAvailableLunch, setMeals, setVendors]);
 
   // useEffect(() => {
   //   const fetchData = async () => {
