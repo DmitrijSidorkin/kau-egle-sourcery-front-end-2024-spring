@@ -1,7 +1,8 @@
 {
   "user": {
     "userName": "frontender",
-    "password": "securepass123",
+    "email": "demo@email.com",
+    "password": "demo",
     "name": "Stanton",
     "surname": "Richardson",
     "balance": 55.55,
@@ -104,30 +105,35 @@
       "id": 1,
       "name": "Burton",
       "surname": "Whitaker",
+      "orders": [{}],
       "img": "https://lh3.googleusercontent.com/pw/AP1GczPd86eTOZysL0WAf9veGe6WIkEfvgX2zA1gKY65ylS64iQW5kK7ppYKO8uUBJkQZh5UNxDN-E9aJgvQFsS28YzQHREL4rU5_2TXUKd0xjZTd7tu8fCMKANM28tMIHhyD3KnhvA_s0gcvbkK447oLT9E=w611-h321-s-no-gm"
     },
     {
       "id": 2,
       "name": "Dorsey",
       "surname": "Shepherd",
+      "orders": [{}],
       "img": "https://lh3.googleusercontent.com/pw/AP1GczN8h4gHh3CU2rbqTQ32im-ZGQFJh6_8pH_xZjX_xTjOGVgqgbuUfZzhgnraPvh3j3blvhsMqRh4vNss9jCxpA-hy8zllx3ffEsehoeYmSzNtlRrk4e30qOV-61y28NHCFjnPQvLFiAVRPsQyUQ_8z80=w613-h407-s-no-gm"
     },
     {
       "id": 3,
       "name": "Amalia",
       "surname": "Clements",
+      "orders": [{}],
       "img": "https://lh3.googleusercontent.com/pw/AP1GczNxx7hUZVWjQXfi9axHa9kNC0oldSfSJsw0M2Gccn1yK480_Dd5VcvqeQ0weKo6tsqbbbqYMYVR8flDccmrqrFEU0mnOK9ixVzQgx1ao7ZPZ-h8skuWIA_bzoGqwXVvyuRVWZfip4FHawhfZ7u4d_VK=w610-h407-s-no-gm"
     },
     {
       "id": 4,
       "name": "Addie",
       "surname": "Horton",
+      "orders": [{}],
       "img": "https://lh3.googleusercontent.com/pw/AP1GczMpmk11zhuVZ2G_UB4GexN9phSuaDZ4JSEMgk9l2FKavowvTv9mkElxB-eem33gEj49tFZUDn1XaI_bkEXVp7ZdEOpDbTeK8EjGdhtPDJxCc5ymDuMvVRwZTA6Oca6ID1nGQA2o36zBGz_jgknVovdw=w609-h344-s-no-gm"
     },
     {
       "id": 5,
       "name": "Lacey",
       "surname": "Combs",
+      "orders": [{}],
       "img": "https://lh3.googleusercontent.com/pw/AP1GczMEFyPtgHzU4U-kLNuyb9FES-wKXPYvvGp3BoRTJKfKIWb6tirHkbx0QMba_-C96oNzFGmi6_45WHx_E0SfkI-zZQeCB0t5iMv-Kp3ZTJ2EeAlBJUPo9yiOv8gvbz-3TpuscIQMvTV5GkmAY6_Xy-Lo=w611-h407-s-no-gm"
     }
   ],

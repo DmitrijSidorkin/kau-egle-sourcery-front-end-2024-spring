@@ -6,34 +6,50 @@ import { Login } from './Login/Login';
 import { Register } from './Register/Register';
 import PageFooter from '../PageFooter/PageFooter';
 import styles from './Auth.module.scss';
+import * as jsonData from '@/../data/db.json';
 
 export function Auth() {
   const [activeTab, setActiveTab] = useState('login');
   const [, setUserData] = useState<APIData[]>([{}]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       const existingData = localStorage.getItem('userInfo');
-
       if (!existingData) {
-        const response = await fetch('http://localhost:3002/user');
-        const data = await response.json();
-
-        const modifiedData = {
-          ...data,
-          email: 'yomomma@gmail.com',
-        };
-
-        const usersArray = [modifiedData];
+        const data = jsonData.user;
+        const usersArray = [data];
         setUserData(usersArray);
         localStorage.setItem('userInfo', JSON.stringify(usersArray));
       } else {
         setUserData(JSON.parse(existingData));
       }
     };
-
     fetchData();
   }, []);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const existingData = localStorage.getItem('userInfo');
+
+  //     if (!existingData) {
+  //       const response = await fetch('http://localhost:3002/user');
+  //       const data = await response.json();
+
+  //       const modifiedData = {
+  //         ...data,
+  //         email: 'yomomma@gmail.com',
+  //       };
+
+  //       const usersArray = [modifiedData];
+  //       setUserData(usersArray);
+  //       localStorage.setItem('userInfo', JSON.stringify(usersArray));
+  //     } else {
+  //       setUserData(JSON.parse(existingData));
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   const handleTabSwitch = (tabName: string) => {
     setActiveTab(tabName);

@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
 import AvailableFoodRow from '../AvailableFoodRow/AvailableFoodRow';
 import TablePagination from '@/components/Pagination/Pagination';
@@ -62,7 +63,7 @@ function AvailableFoodTable({
         {paginationDisplayLunches.map((lunch) => (
           <AvailableFoodRow
             handleClick={handleClick}
-            key={lunch.id}
+            key={uuid()}
             availableLunch={lunch}
             user={fetchedUsers.find((user) => user.id === lunch.userId) || undefined}
           />

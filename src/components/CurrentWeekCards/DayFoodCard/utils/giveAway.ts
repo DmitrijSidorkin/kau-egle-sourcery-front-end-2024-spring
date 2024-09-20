@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from 'react';
-import { v4 as uuid } from 'uuid';
 import { AvailableLunch, UserData } from '@/context/AuthContext';
 import calcWeekDayDate from '@/utils/calcWeekDayDate';
 import { updateUserData } from '@/utils/updateUserData';
@@ -18,7 +17,6 @@ function giveAway(
     const modifiedOrder: AvailableLunch = {
       username: currentUserData.userName,
       mealIds: currentOrder.mealsIds,
-      id: uuid(),
     };
     const updatedAvailableLunch = [...availableLunch, modifiedOrder];
 

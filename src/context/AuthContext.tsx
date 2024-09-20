@@ -27,7 +27,6 @@ export interface ConfirmedOrders {
 }
 
 export interface AvailableLunch {
-  id: string;
   username?: string;
   userId?: number;
   mealIds: number[];

@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import pizzaIcon from './pizza.png';
 import sandwichIcon from './sandwich.png';
 import ramenIcon from './ramen.png';
