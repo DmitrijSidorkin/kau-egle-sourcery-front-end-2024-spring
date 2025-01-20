@@ -30,6 +30,4 @@ You can install all the required dependencies by running the `npm i` command in 
 
 To run the applications in development mode, run these commands in terminal:
 
-`npm run server` - runs json-server with available endpoints listed in console. Neccesary for the app to run properly.
-
 `npm run dev` - to run the development server, launches on `localhost` on port `3000`.
