@@ -63,7 +63,7 @@ export function Auth() {
           <div className={styles['auth-wrapper__img-container']}>
             <img
               className={styles['auth-wrapper__img']}
-              src="/src/assets/images/AuthImg.png"
+              src="https://res.cloudinary.com/dyguovdbc/image/upload/v1737452296/Sourcery%20Academy%20Lunch%20App/AuthImg_j19bbp.png"
               alt="man and woman standing holding forks thinking about food"
             />
           </div>
